@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .wrapper{
+        overflow: hidden;
+        width: 300px;
+        margin: 100px auto;
+    }
+    .first{
+        overflow: hidden;
+    }
+    .first li{
+        float: left;
+        width: 100px;
+        background-color: #bfa;
+    }
+    .second{
+        display: none;
+    }
+    .second li{
+        height: 30px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.first>li').hover(function () {
+            $(this).children('ul').stop().slideToggle(1000)
+        })
+// $('.first').on('mouseenter','li',function () {
+//     $(this).children('ul').stop().slideUp(1000)
+// })
+//         $('.first').on('mouseleave','li',function () {
+//             $(this).children('ul').stop().slideDown(1000).stop()
+//         })
+    })
+
+</script>
+<body>
+<div class="wrapper">
+    <ul class="first">
+        <li>1
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul></li>
+        <li>2
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+        <li>3
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul></li>
+    </ul>
+</div>
+
+</body>
+</html>

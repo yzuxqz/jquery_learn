@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+$(function(){
+    $("div").mouseenter(function(){
+        $(this).siblings().stop().fadeTo(101,.5);
+
+    })
+    $("div").mouseleave(function(){
+        $(this).siblings().stop().fadeTo(101,1);
+    })
+})
+    </script>
+</body>
+</html>

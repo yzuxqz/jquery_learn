@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab_list {
+            height: 20px;
+        }
+
+        .tab_list li {
+            list-style: none;
+            float: left;
+            width: 50px;
+            height: 20px;
+            margin-left: 10px;
+            background-color: palegreen;
+        }
+
+        .tab_con div {
+            width: 200px;
+            height: 200px;
+            background-color: palevioletred;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab_list">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="tab_con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <script>
+        $(function () {
+            $(".tab_list li").click(function () {
+                $(this).css("background", "red").siblings().css("background", "");;
+                var index = $(this).index();
+                $(".tab_con div").eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

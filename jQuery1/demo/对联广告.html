@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .left,
+    .right{
+        position: fixed;
+        top: 200px;
+        display: none;
+        width: 100px;
+        height: 250px;
+        background-color: red;
+    }
+    .left{
+        left: 0;
+    }
+    .right{
+        right: 0;
+    }
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            if($('html,body').scrollTop()>=400){
+                $('.left').show(1000)
+                $('.right').show(1000)
+            }else{
+                $('.left').hide(1000)
+                $('.right').hide(1000)
+            }
+        })
+
+    })
+</script>
+<body>
+<div class="left">1</div>
+<div class="right">2</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: palevioletred;
+    }
+</style>
+</head>
+<body>
+    <button>淡入</button>
+    <button>淡出</button>
+    <button>切换</button>
+    <button>修改透明度</button>
+    <div></div>
+    <script>
+        $("button:first").click(function(){
+            $("div").fadeIn();
+        })
+        $("button").eq(1).click(function(){
+            $("div").fadeOut();
+        })
+        $("button:last").click(function(){
+            $("div").fadeTo(20,0.3);
+        })
+        $("button").eq(2).click(function(){
+            $("div").fadeToggle(0.3);
+        })
+    </script>
+</body>
+</html>

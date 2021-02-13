@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="grandpa">
+        <div class="fahther">
+            <div class="son"></div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>1</p>
+        <div>
+            <p>2</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            console.log($(".son").parent());
+            console.log($(".nav").children("p").css("color", "red"));
+            console.log($(".nav").find("p").css("color", "green"));
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            display: none;
+        }
+    </style>
+    <script src="../../jquery.min.js"></script>
+    <script>
+        $(function () {
+            // 1.点击发布按钮 动态创建li，放入文本框内容和删除按钮，并添加到ul中
+            $(".btn").on("click", function () {
+                var li = $("<li></li>");
+                li.html($(".txt").val() + "<a href='javascript:;'>删除</a>");
+                $("ul").prepend(li);
+                li.slideDown();
+                $(".txt").val("");
+            })
+            //2.点击删除按钮
+            $("ul").on("click","a", function () {
+
+                $(this).parent().slideUp(function(){
+                    $(this).remove();
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="box" id="weibo">
+        <span>微博发布</span>
+        <textarea name="" id="" cols="30" rows="10" class="txt"></textarea>
+        <button class="btn">发布</button>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .first li{
+        width: 100px;
+        background-color: #bfa;
+    }
+    .second{
+        display: none;
+
+    }
+    .second li{
+        height: 30px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.first').on('click','li',function () {
+            $(this).siblings().children('ul').stop().slideUp(1000)
+            $(this).children('ul').stop().slideToggle(1000)
+        })
+    })
+</script>
+<body>
+<div class="wraper">
+    <ul class="first">
+        <li>
+            <span>1</span>
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+        <li>            <span>1</span>
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul></li>
+        <li>            <span>1</span>
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul></li>
+        <li>            <span>1</span>
+            <ul class="second">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul></li>
+    </ul>
+</div>
+</body>
+</html>

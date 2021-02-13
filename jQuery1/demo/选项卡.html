@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .wrapper{
+        width: 320px;
+        margin: 100px auto;
+    }
+    .menu{
+        overflow: hidden;
+    }
+    .menu li{
+        float: left;
+        height: 50px;
+        width: 80px;
+        background-color: red;
+    }
+    .content li{
+        position: absolute;
+        width: 320px;
+        height: 300px;
+        background-color: #bfa;
+    }
+    .show{
+        z-index: 1;
+    }
+</style>
+<script src="../jquery.min.js"></script>
+<script>
+    $(function () {
+        $('.menu').on('click','li',function (e) {
+           $('.content li').eq($(e.target).index()).addClass('show').siblings().removeClass('show')
+        })
+    })
+</script>
+<body>
+<div class="wrapper">
+    <ul class="menu">
+        <Li>1</Li>
+        <Li>2</Li>
+        <Li>3</Li>
+        <Li>4</Li>
+    </ul>
+    <ul class="content">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+
+</body>
+</html>

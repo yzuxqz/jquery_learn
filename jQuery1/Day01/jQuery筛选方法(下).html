@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+
+<body>
+    <ol>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li class="item">我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ol>
+    <ul>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li>我是ul</li>
+    </ul>
+    <script>
+        $(function () {
+            $("ol .item").siblings('li').css("color", "red");
+            $("ul li").eq(1).css("color", "red");
+            var bool = $("ol li").eq(2).hasClass("item");
+            console.log(bool);
+
+        })
+    </script>
+</body>
+
+</html>
